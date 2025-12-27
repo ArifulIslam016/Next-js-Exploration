@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Title from "@/Components/Title";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Exploroing NJ",
+  title: "Dev Story",
   description: "Exploroing Next js core concept",
 };
 
@@ -21,8 +22,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      >    
+      <header className="p-4 border-b-2 border-gray-700">
+        <h1>Dev Story</h1>
+      </header>
+          <main className="py-5 ">
+                  {children}
+
+        </main>
       </body>
     </html>
   );

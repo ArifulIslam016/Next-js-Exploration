@@ -1,9 +1,11 @@
+import Title from "@/Components/Title";
 import Image from "next/image";
 
 export default function Home() {
   return (
    <div>
-    Learning next jj
+    <Title>This is Home </Title>
+    Home
    </div>
   );
 }
